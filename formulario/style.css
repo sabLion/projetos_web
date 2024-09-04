@@ -1,0 +1,47 @@
+body{ /*corpo do sie*/
+    font-family: sans-serif; /*fonte sem serifa (ornamentos)*/
+    display: flex; /*layout flexiivel com itens*/
+    justify-content: center; /*posicionar centralizado*/
+    align-items: center; /*alinhar ao centro*/
+    background-color: #000000; /*cor de fundo cinza*/
+    min-height: 100vh; /*altura de visualização*/
+
+}
+
+form{ /*formulário*/
+    background-color: white; /*cor de fundo*/
+    padding: 30px; /*espaçamento interno*/
+    border-radius: 10px; /*arredondamento*/
+    box-shadow: 0 2px 5px rgba(78, 78, 78, 0.1); /*sombra da caixa*/
+}
+
+label{ /*rótulo do campo*/
+    display: block; /*posicionamento em bloco*/
+    margin-bottom: 5px; /*margem inferior*/
+}
+
+input, textarea{ /*campo e area de texto*/
+    width: 100%; /*o campo ocupa 100% do espaço disponivel*/
+    padding: 10px; /*espaçamento interno 10px*/
+    margin-bottom: 15px; /*margem inferior*/
+    border: 1px solid #000000; /*espesura, tipo cor da borda*/
+    border-radius: 3px; /*arredonda aborda*/
+}
+
+textarea{
+    height: 120px; /*altura da area de texto*/
+
+}
+
+button{
+    background-color: rgb(8, 8, 8); /*cor de fundo*/
+    color: white; /*cor da fonte*/
+    padding: 12px 20px; /*12px altura, 20px laterais*/
+    border: none; /*sem borda*/
+    cursor: pointer; /*altera o cursor do mouse*/
+}
+
+button:hover{/*mouse sobre o botão*/
+    background-color: #474747; /*altera a cor de fundo do botão*/
+
+}
