@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: "Sora", sans-serif;
+}
+
+header{
+    width: 100%;
+}
+
+.cabecalho-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bg-home{
+    position:relative
+}
+
+.bg-home::before{
+    content: "" ; /* deixar o conteúdo vazil*/
+    display: block; /* o conteúdo será um bloco único*/
+    position: absolute; /* define a posição da imagem*/
+    background-image: url(imagens/bg.svg); /* imagem de fundo*/
+    left: 0; /* margem esquerda*/
+    top: 0; /* margem superior*/
+    width: 100%; /* largura de 100% do espaço disponivel*/
+    height: 100%; /* altura de 100% do espaço disponvel*/
+    z-index: -1; /* posicionar a imagem abaixo do logotipo*/
+    background-size: cover; /* aumentar aimagem manendo sua proporção*/
+    background-repeat: no-repeat; /* não repetir a imagem*/
+}
+
+i{
+    color: #fff;
+}
+
+.cabecalho-botao{
+    color: #fff; /* cor da fonte branca*/
+    border: 1px solid #fff; /* borda de 1px de expessura cor branca*/
+    padding: 8px 24px; /* espaçamento interno*/
+    text-decoration: none; /* retira o traço abaixo do texto*/
+    border-radius: 4px; /* arredonda s bordas do botão*/
+    background-color: transparent; /* botão com fundo transparente*/
+    transition: background-color 0.7;
+}
+
+.cabecalho-botao:hover{ /* muda a cor do botão com a ação do mouse*/
+    background-color: rgb(11, 168, 37);
+    border: 1px solid rgb(11, 168, 37);
+    color: black;
+}
+
+.cabecalho-icones{
+    gap: 14px;   /* espaçamento entre os ícones*/
+    display: flex;  /* posicionar os ícones na horizontal*/
+}
+
+
+
+.principal{
+    color: #fff;
+    min-height: 80vh; /* altura mínima doelemento*/
+    display: flex; /* posicionar os ícones na horizontal*/
+    flex-direction: column; /* posiciona os elementos em uma coluna*/
+    align-items: center; /* centraliza os itens na vertical*/
+    justify-content: center; /* centraliza os itens nahorizontal*/
+    padding: 14px; /* espaçamento interno 14px*/
+}
+
+.principal h1{
+    text-align: center; /* centralizar na horizontal*/
+    line-height: 150%; /* autura da linha 1,5 vezes maior que o tamanho da fonte*/
+    max-width: 940px; /* largura maxima de 940px*/
+    font-size: 46px; /* tamanho da fonte*/
+}
+
+.principal p{
+    text-align: center; /* centralizar na horizontal*/
+    margin: 14px;
+}
+
+.botao-contato{
+    padding: 14px 28px; /* espaçamento interno acima /abaixo 14px esquerda/direita 28px*/
+    color: #fff; /* cor da fonte*/
+    background-color: red; /* cor de fundo*/
+    border: 0; /* borda 0 - sem borda*/
+    font-size: 18px; /* tamanho da fonte 18*/
+    text-decoration: none; /*retira o traço de baixo da fonte*/
+    font-weight: 600; /* espessura do traço da fonte*/
+}
+
+.botao-contato:hover{ /* comportamento do botão quando o mouse passa sobre o botão*/
+    animation: scaleButton 0.8s alternate infinite; /* duração da animação*/
+}
+
+@keyframes scaleButton { /* descrição de escala do botão*/
+    from{
+        transform: scale(1); /* tamanho original*/
+    }
+    to{
+        transform: scale(1.07); /* o tamanho 1,7 vezes maior*/
+    }
+}
+
+.sobre{
+    background-color: #06121e; /* altera a cor de fundo*/
+    color: #fff; /* cor da fonte*/
+}
+
+.sobre-conteudo{
+    display: flex; /* posicionar os ícones na horizontal*/
+    align-items: center; /* centraliza os itens na vertical*/
+    justify-content: center; /* centraliza os itens na horizontal*/
+    gap: 14px; /* espaçamento entre os ícones*/
+    padding: 34px 14px 64px 14px; /* espaçamento acima 34px, direita 14px, abaixo64px, esquerda 14px*/
+}
+
+.sobre-conteudo img{
+    max-width: 570px; /* largura maxima da imagem*/
+}
+
+.sobre-conteudo div{
+    flex: 1;
+}
+
+.sobre-conteudo h2{
+    font-size: 38px;/* tamanho da fonte*/
+    margin-bottom: 24px; /* margem inferior*/
+}
+
+.sobre-conteudo p{
+    margin-bottom: 14px; /* adiciona um espaçamento entre os paragrafos*/
+    line-height: 150%; /* aumentao espaçamento entre as linhas do parágrafo*/
+}
+
+.servicos{
+    background-color: #fff;
+    color: #232224;
+    display: flex; /* Posicionar os ícones horizontalmentr*/
+    flex-direction: column; /* direção/orientação do conteúdo em colunas*/
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px; 
+}
+
+.servicos-conteudo h2{
+    text-transform: uppercase; /* deixa o texto em letras maiúsculas*/
+    text-align: center; /* centraliza o títullo na horizontal*/
+    font-size: 38px; /* tamanho da fonte do título*/
+    margin-bottom: 14px; /* margem inferior até o próxmo parágrafo*/
+
+}
+
+.servicos-conteudo p{
+    line-height: 150%; /* aumenta os espacçamento das linhas*/
+    margin-bottom: 14px; /* margem inferior ate o proximo paragrafo*/
+    text-align: left; /* alinha o texto à esquerda*/
+    max-width: 780px; /* largura maxima*/
+}
+
+.cortes{
+    display: flex; /* posicionar os icones na horizontal*/
+    align-items: center; /* centraliza os itens na vertical*/
+    justify-content: center; /* centraliza os icones na horizontal*/
+    gap: 16px; /* espaçamento entre os icones*/
+    padding: 0 44px 34px 44px; /* espaçamento acima 0px, direita 44px, abaixo 34px, esquerda 44px*/
+}
+
+.corte{
+    flex: 1;
+    display: flex;/* posiicionar na horizontal*/
+    flex-direction: column; /* direção/orientação do conteúdo em colunas*/
+    background-color: #fff; /* cor de fundo da caixa*/
+    border-radius: 8px; /* arredonda as bordas da caixa*/
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45); /* sombreamento*/
+    overflow: hidden; /* cortar o cunteúdo que ultrapassa o limite do elemento*/
+}
+
+.corte img{
+    width: 100%;
+    max-width: 354px;
+    transition: transform 0.2s;
+}
+
+
+.corte img:hover{ /* comportamento da img quando ou mouse passar sobre ela*/
+    transform: scale(1.2);
+    z-index: 1; /* organiza aposição da imagem no eixo z (camada da frente)*/
+}
+
+.corte-info{
+    width: 100%; /* dimensiona em 100% do espaço*/
+    display: flex; /* posiciona os elementos na horizontal*/
+    justify-content: space-between; /*adiciona o espaçamento entre os elementos*/
+    padding: 14px; /* espaçamento de 14px*/
+    background-color: #fff;
+    z-index: 99; /* posiciona a div corte a frente da imagem*/
+}
+
+.corte-info button{
+    color: #fff; /* cor da fonte branca*/
+    background-color: red; /* cor de fundo vermelha*/
+    padding: 4px 8px; /* espaçamento interno acima/abaixo 4px, esquerda/direita 8px*/
+    border-radius: 4px; /* arredonda as bordas da caixa*/
+    border: 0; /* sem borda visivel*/
+    cursor: default; /* ponteiro do mouse padrão*/
+}
+
+.rodape {
+    display: flex; /* posicionar os elementos na horizontal*/
+    align-items: center; /*centralizada os itens na vertical*/
+    justify-content: center; /*ccentralizada os itens na horizontal*/
+    gap: 24px; /* espaçamento entre os icones*/
+    padding: 54px 0; /* */
+    flex-direction: column; /* direção/orientação do conteúdo em colunas*/
+    color:#fff;
+    
+}
+
+.rodape h2{
+    font-size: 38px; /* tamanho da fonte do título*/
+    margin-bottom: 14px; /* margem inferior até o próxmo parágrafo*/
+}
+
+.rodape-icones{
+    display: flex;
+    gap: 8px;
+    color: #fff;
+}
+
+.endereco{
+    text-align: center;
+}
+
+.endereco a{
+    color: #fff;
+    line-height: 200%;
+}
+
+body{
+    font-family: "Sora", sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #06121e;
+}
